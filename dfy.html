@@ -1,13 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DFY – White-Glove</title>
-</head>
-<body>
-  <div id="root"></div>
-  <script>window.__VARIANT__="dfy";</script>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI BotBuilders — Done For You</title>
+
+    <!-- Tailwind (already wired in your project) -->
+    <link href="/src/index.css" rel="stylesheet" />
+
+    <!-- If your downloaded template had its own CSS, add it here -->
+    <!-- Example: <link rel="stylesheet" href="/template/css/style.css" /> -->
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- 👇 Tell React which variant this page is -->
+    <script>
+      window.__VARIANT__ = "dfy";
+    </script>
+
+    <!-- Your React app entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
