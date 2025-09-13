@@ -1,13 +1,14 @@
 export default function Dfy() {
-  // Paste your full DFY HTML (body content only) between the backticks.
-  // Keep <script> tags OUT for now (see “Assets & CSS/JS” below).
   return (
     <div
       dangerouslySetInnerHTML={{
         __html: `
 <!-- ================== START DFY HTML ================== -->
-<h1>Your DFY homepage goes here</h1>
-<p>Replace this whole block with your real HTML.</p>
+<section class="hero">
+  <h1>Done For You — White Glove Service</h1>
+  <p>We build, launch, and optimise your AI systems end-to-end.</p>
+  <a href="/contact" class="cta">Book a Call</a>
+</section>
 <!-- =================== END DFY HTML =================== -->
         `
       }}
