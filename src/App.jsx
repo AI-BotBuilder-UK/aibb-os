@@ -1,29 +1,22 @@
-import React, { useState } from "react";
-import { getInitialVariant } from "./variant";
+import React from "react";
 
-function App() {
-  const [variant, setVariant] = useState(getInitialVariant());
+import Dfy from "./pages/Dfy.jsx";
+import Dwy from "./pages/Dwy.jsx";
+import Diy from "./pages/Diy.jsx";
+import Book from "./pages/Book.jsx";
 
-  const renderContent = () => {
-    switch (variant) {
-      case "dfy":
-        return <h1>Done For You Page</h1>;
-      case "dwy":
-        return <h1>Done With You Page</h1>;
-      case "diy":
-        return <h1>Do It Yourself Page</h1>;
-      case "book":
-        return <h1>Book a Call Page</h1>;
-      default:
-        return <h1>Hello, AI BotBuilders OS is live!</h1>;
-    }
-  };
-
-  return (
-    <div style={{ padding: "2rem" }}>
-      {renderContent()}
-    </div>
-  );
+function App({ variant }) {
+  switch (variant) {
+    case "dwy":
+      return <Dwy />;
+    case "diy":
+      return <Diy />;
+    case "book":
+      return <Book />;
+    case "dfy":
+    default:
+      return <Dfy />;
+  }
 }
 
 export default App;
