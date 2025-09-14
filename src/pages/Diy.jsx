@@ -1,48 +1,59 @@
 export default function Diy() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-700 via-indigo-700 to-blue-700 text-white">
-      <header className="max-w-6xl mx-auto px-6 pt-24 pb-10 text-center">
-        <span className="inline-block rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
-          DIY — Toolkit & Playbooks
-        </span>
-        <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-          Master AI Systems<br className="hidden sm:block" />
-          <span className="text-white/90"> with Expert-Grade Toolkits</span>
-        </h1>
-        <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
-          Get the exact templates, prompts, and deployment recipes we use internally.
-          Build at your pace with clear, copy-paste instructions.
+    <main className="min-h-screen bg-gradient-to-br from-[#4c1d95] via-[#5b21b6] to-[#1e3a8a] text-white">
+      {/* Hero */}
+      <section className="container mx-auto px-6 py-24 text-center">
+        <p className="inline-block mb-4 rounded-full bg-white/10 px-4 py-1 text-sm backdrop-blur">
+          DIY • Toolkit & Playbooks
         </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#"
-            className="rounded-xl bg-white text-indigo-700 font-semibold px-6 py-3 shadow hover:shadow-lg transition"
-          >
+        <h1 className="mx-auto max-w-4xl text-5xl font-extrabold md:text-6xl leading-tight">
+          Expert-Grade <span className="text-fuchsia-300">AI Toolkits</span> You Can Ship Today
+        </h1>
+        <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
+          Battle-tested prompts, agents, RAG recipes, and deployment guides for Vercel/Cloudflare/Supabase.
+        </p>
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <a href="#toolkit" className="rounded-xl bg-white text-gray-900 px-6 py-3 font-semibold shadow">
             📦 Get the DIY Toolkit
           </a>
-          <a
-            href="#"
-            className="rounded-xl border border-white/30 text-white px-6 py-3 hover:bg-white/10 transition"
-          >
+          <a href="#library" className="rounded-xl border border-white/30 px-6 py-3 font-semibold">
             📚 See All Playbooks
           </a>
         </div>
-      </header>
+      </section>
 
-      {/* quick features row */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Cards */}
+      <section id="library" className="container mx-auto px-6 pb-10 grid gap-6 md:grid-cols-3">
         {[
-          { title: "Plug-and-Play Prompts", text: "Battle-tested prompt packs for agents, RAG, and workflows." },
-          { title: "Deployment Recipes", text: "Step-by-step guides for Vercel, Cloudflare, Supabase & more." },
-          { title: "Templates & Starters", text: "Production-ready UI blocks and boilerplates to ship fast." },
-        ].map((f, i) => (
-          <div key={i} className="rounded-2xl bg-white/10 backdrop-blur p-6 border border-white/10">
-            <h3 className="font-semibold text-xl">{f.title}</h3>
-            <p className="mt-2 text-white/80">{f.text}</p>
+          { title: "Plug-and-Play Prompts", desc: "Agent/tool prompts for common ops and sales workflows." },
+          { title: "Deployment Recipes", desc: "Step-by-step for Vercel, Cloudflare, Supabase & more." },
+          { title: "Templates & Starters", desc: "Production-ready UI blocks and boilerplates." },
+        ].map((c, i) => (
+          <div key={i} className="rounded-2xl bg-white/10 p-6 backdrop-blur">
+            <h3 className="text-xl font-bold">{c.title}</h3>
+            <p className="mt-2 text-white/90">{c.desc}</p>
           </div>
         ))}
       </section>
-    </div>
+
+      {/* What’s Inside */}
+      <section id="toolkit" className="container mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center">What’s Inside the Toolkit</h2>
+        <ul className="mx-auto mt-8 max-w-3xl space-y-3 text-white/90">
+          <li>• Prompt packs (agents, RAG, workflows) with notes.</li>
+          <li>• Example repos and scripts to copy/paste.</li>
+          <li>• Evaluation checklists and growth guides.</li>
+        </ul>
+      </section>
+
+      {/* CTA */}
+      <section className="container mx-auto px-6 py-20 text-center">
+        <h3 className="text-2xl font-bold">Grab the toolkit and ship faster</h3>
+        <p className="mt-2 text-white/90">Everything we wish we had on day one.</p>
+        <a href="#" className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-gray-900 shadow">
+          📦 Get the DIY Toolkit
+        </a>
+      </section>
+    </main>
   );
 }
